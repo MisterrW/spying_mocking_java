@@ -30,9 +30,14 @@ public class GameTest {
   }
   
   @Test
+  //mockito will presumably create a rollable which returns an int, or somehow satisfies dice.Roll
   public void takeTurnMock() {
     Rollable diceMock = mock(Rollable.class);
-    
+    game = new Game(diceMock);
+
+    game.nextTurn();
+
+    assertEquals(1, game.getTurnCount());
   }
 }
 

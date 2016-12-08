@@ -1,6 +1,6 @@
 public class Game {
   Rollable dice;
-  Private int turnCount;
+  private int turnCount;
 
   public Game(Rollable dice) {
     this.dice = dice;
